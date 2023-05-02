@@ -16,7 +16,7 @@ public class RepositoryPage {
         return this;
     }
 
-    @Step("Проверить имя {numberIssue}ого Issue")
+    @Step("Проверить имя {numberIssue} Issue")
     public RepositoryPage checkIssueName(String numberIssue, String nameIssue) {
         $(String.format("#issue_%s_link", numberIssue)).shouldHave(text(nameIssue));
         return this;

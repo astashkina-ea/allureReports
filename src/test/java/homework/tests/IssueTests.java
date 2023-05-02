@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-
 @Feature("Issue в репозитории")
 @Story("Отображение Issue во вкладке Issue")
 @Owner("astashkina_ea")
@@ -36,7 +35,7 @@ public class IssueTests extends TestBase {
         open("");
     }
 
-    @DisplayName("Проверка имени 1ого Issue")
+    @DisplayName("Проверка имени " + ISSUE_NUMBER + " Issue")
     @Test
     public void verifyIssueNameTestWithClean() {
         $("[name = q]").setValue(REPOSITORY).pressEnter();
@@ -45,7 +44,7 @@ public class IssueTests extends TestBase {
         $(String.format("#issue_%s_link", ISSUE_NUMBER)).shouldHave(text(ISSUE_NAME));
     }
 
-    @DisplayName("Проверка имени 1ого Issue")
+    @DisplayName("Проверка имени " + ISSUE_NUMBER + " Issue")
     @Test
     public void verifyIssueNameTestWithLambdaSteps() {
         step("Найти репозиторий " + REPOSITORY, () ->
@@ -57,12 +56,12 @@ public class IssueTests extends TestBase {
         step("Выбрать вкладку Issue", () ->
                 $("#issues-tab").click()
         );
-        step("Проверить имя " + ISSUE_NUMBER + "ого Issue", () ->
+        step("Проверить имя " + ISSUE_NUMBER + " Issue", () ->
                 $(String.format("#issue_%s_link", ISSUE_NUMBER)).shouldHave(text(ISSUE_NAME))
         );
     }
 
-    @DisplayName("Проверка имени 1ого Issue")
+    @DisplayName("Проверка имени " + ISSUE_NUMBER + " Issue")
     @Test
     public void verifyIssueNameTestWithAnnotatedSteps() {
         mainPage.searchRepository(REPOSITORY);
