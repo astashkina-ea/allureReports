@@ -1,4 +1,4 @@
-package guru.qa;
+package lesson;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
