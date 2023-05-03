@@ -28,7 +28,7 @@ dependencies {
     testImplementation(
             'org.junit.jupiter:junit-jupiter-api:5.9.0',
             'com.codeborne:selenide:6.12.4',
-            'io.qameta.allure:allure-selenide:2.22.0' //'io.qameta.allure:allure-selenide:2.22.0'
+            'io.qameta.allure:allure-selenide:2.22.0' //https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide
     )
 
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
