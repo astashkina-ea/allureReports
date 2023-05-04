@@ -17,7 +17,7 @@ public class AttachmentsTest {
 
         step("Открываем главную страницу", () -> {
             open("https://github.com");
-            //page source
+            //page source в виде снапшота
             attachment("Source", webdriver().driver().source());
         });
     }
